@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlHomeParent"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_camera"
+        android:layout_marginStart="20dp"
+        android:visibility="gone">
+
+    </ImageView>
+
+    <com.jambacabs.driver.font.CustomTextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/ivIcon"
+        android:layout_marginStart="@dimen/tendp"
+        android:layout_marginEnd="@dimen/twentydp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        app:name="bold" />
+</RelativeLayout>

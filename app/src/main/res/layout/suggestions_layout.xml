@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlHomeParent"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:layout_margin="@dimen/twentydp">
+
+    <com.jambacabs.driver.font.CustomTextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:paddingStart="@dimen/twentydp"
+        android:paddingEnd="@dimen/twentydp"
+        android:paddingTop="@dimen/tendp"
+        android:paddingBottom="@dimen/tendp"
+        android:gravity="center_vertical|center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:background="@drawable/driver_edit_text_corner"
+        app:name="bold" />
+</RelativeLayout>

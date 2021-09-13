@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlFirst"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_rlFirst"
+        android:background="@color/black">
+
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="@dimen/edit_back_start"
+            android:layout_marginTop="@dimen/edit_back_top"
+            android:contentDescription="@string/app_name"
+            android:onClick="onClick"
+            android:src="@drawable/ic_arrow_back_white_24dp">
+        </ImageView>
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:layout_marginTop="@dimen/edit_back_top"
+            android:layout_toRightOf="@id/ivBack"
+            android:text="Edit Profile"
+            android:textColor="@color/white"
+            android:textSize="@dimen/edit_textsize">
+        </com.jambacabs.driver.font.CustomTextView>
+
+        <ImageView
+            android:id="@+id/ivWallpaper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/edit_back_top"
+            android:layout_marginEnd="@dimen/edit_margin_end"
+            android:contentDescription="@string/app_name"
+            android:onClick="onClick"
+            android:src="@drawable/ic_photo_library_black_24dp">
+        </ImageView>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/ic_profile">
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvFnLn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="SIRISHA TANG"
+                android:textColor="@color/white"
+                android:textSize="20sp">
+
+            </com.jambacabs.driver.font.CustomTextView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlFirst"
+        android:background="@color/dark_grey"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/llFirst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_pan_tool_black_24dp">
+            </ImageView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tv_selfDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text="@string/edit_descri_text"
+                android:textColor="@color/white"
+                android:textSize="20sp">
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <ImageView
+                android:id="@+id/iv_addDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:onClick="onClick"
+                android:src="@drawable/ic_add_white">
+            </ImageView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llSecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_language_black_24dp">
+            </ImageView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tv_lang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text="@string/edit_languages_text"
+                android:textColor="@color/white"
+                android:textSize="20sp">
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <ImageView
+                android:id="@+id/iv_addLang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_add_white">
+            </ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llThird"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_home_black_24dp">
+            </ImageView>
+
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tv_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text="@string/edit_location_text"
+                android:textColor="@color/white"
+                android:textSize="20sp">
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <ImageView
+                android:id="@+id/iv_addHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_add_white">
+            </ImageView>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddVehicleActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/black"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:id="@+id/rlAddVehicleBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentydp"
+                android:layout_marginTop="@dimen/tendp"
+                android:layout_marginBottom="@dimen/tendp"
+                android:onClick="onClick">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_back_white_24dp"
+                    android:contentDescription="@string/app_name">
+                </ImageView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/tendp">
+                <com.jambacabs.driver.font.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/add_vehicle_small"
+                    app:name="bold"
+                    android:textColor="@color/white"
+                    android:textSize="20sp">
+                </com.jambacabs.driver.font.CustomTextView>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar"
+        android:layout_marginBottom="@dimen/twentydp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/twentydp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/add_vehicle"
+                    android:layout_centerInParent="true">
+                </ImageView>
+
+            </RelativeLayout>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/vehicle_heading"
+                android:textColor="@color/black"
+                app:name="bold"
+                android:layout_marginStart="@dimen/fivedp"
+                android:layout_marginEnd="@dimen/fivedp"
+                android:textSize="28sp">
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvMakeHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twentydp"
+                android:text="@string/vehicle_makeHeading"
+                android:layout_marginStart="@dimen/fivedp"
+                android:layout_marginEnd="@dimen/fivedp"
+                android:textColor="@color/black"
+                app:name="bold"
+                android:textSize="@dimen/twentysp">
+
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvMake"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_card"
+                android:padding="@dimen/twentydp"
+                android:gravity="start"
+                android:onClick="onClick"
+                android:textColor="@color/black"
+                android:drawableEnd="@drawable/ic_down"
+                android:textColorHint="@color/black"
+                app:name="bold"
+                android:hint="@string/vehicle_makeSelection">
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fivedp"
+                android:text="@string/make_heading1"
+                android:textColor="@color/gray_new"
+                android:textSize="15sp"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/fivedp"
+                android:layout_marginEnd="@dimen/fivedp"
+                app:name="bold">
+            </com.jambacabs.driver.font.CustomTextView>
+
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvModelHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tendp"
+                android:text="@string/vehicle_modelHeading"
+                android:layout_marginStart="@dimen/fivedp"
+                android:layout_marginEnd="@dimen/fivedp"
+                app:name="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp">
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_card"
+                android:textColorHint="@color/black"
+                android:padding="@dimen/twentydp"
+                android:onClick="onClick"
+                app:name="bold"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:drawableEnd="@drawable/ic_down"
+                android:hint="@string/vehicle_modelSelection">
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fivedp"
+                android:text="@string/model_heading1"
+                android:textColor="@color/gray_new"
+                android:textSize="15sp"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/fivedp"
+                android:layout_marginEnd="@dimen/fivedp"
+                app:name="bold">
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvYearHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fifteendp"
+                android:text="@string/vehicle_yearHeading"
+                android:layout_marginStart="@dimen/fivedp"
+                android:layout_marginEnd="@dimen/fivedp"
+                android:textColor="@color/black"
+                app:name="bold"
+                android:textSize="20sp">
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_card"
+                android:textColorHint="@color/black"
+                android:padding="@dimen/twentydp"
+                android:onClick="onClick"
+                android:textColor="@color/black"
+                android:gravity="start"
+                app:name="bold"
+                android:drawableEnd="@drawable/ic_down"
+                android:hint="@string/vehicle_yearSelection">
+
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fivedp"
+                android:text="@string/year_heading1"
+                android:textColor="@color/gray_new"
+                android:textSize="15sp"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/fivedp"
+                android:layout_marginEnd="@dimen/fivedp"
+                app:name="bold">
+            </com.jambacabs.driver.font.CustomTextView>
+
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvLicenseHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fifteendp"
+                android:text="@string/vehicle_licenseHeading"
+                android:layout_marginStart="@dimen/fivedp"
+                android:layout_marginEnd="@dimen/fivedp"
+                android:textColor="@color/black"
+                app:name="bold"
+                android:textSize="20sp">
+
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <com.jambacabs.driver.font.CustomEditTextView
+                android:id="@+id/etLicence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_card"
+                android:textColorHint="@color/gray_new"
+                android:padding="@dimen/twentydp"
+                android:maxLines="1"
+                app:name="bold"
+                android:gravity="start"
+                android:singleLine="true"
+                android:hint="@string/vehicle_licenseNoText">
+
+            </com.jambacabs.driver.font.CustomEditTextView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fivedp"
+                android:text="@string/vehicle_licenseHeading1"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/gray_new"
+                android:textSize="15sp"
+                android:gravity="start"
+                app:name="bold">
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <RelativeLayout
+                android:id="@+id/rlDelivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/fifteendp">
+
+                <Switch
+                    android:clickable="true"
+                    android:id="@+id/swDelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:focusable="true"
+                    android:checked="false">
+                </Switch>
+
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:id="@+id/tvDelivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delivery_heading"
+                    android:layout_toStartOf="@id/swDelivery"
+                    android:layout_marginStart="@dimen/fivedp"
+                    android:layout_marginEnd="@dimen/tendp"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:name="bold">
+
+                </com.jambacabs.driver.font.CustomTextView>
+
+
+            </RelativeLayout>
+
+
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/licenseNoDislaimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fifteendp"
+                android:layout_marginStart="@dimen/fivedp"
+                android:layout_marginEnd="@dimen/fivedp"
+                app:name="bold"
+                android:text="@string/vehicle_licenseDisclaimer">
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <com.jambacabs.driver.font.CustomButton
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/twentydp"
+                android:layout_marginTop="@dimen/tendp"
+                android:padding="15dp"
+                android:text="@string/vehicle_continue"
+                android:layout_marginStart="@dimen/fivedp"
+                android:layout_marginEnd="@dimen/fivedp"
+                android:onClick="onClick"
+                android:background="@drawable/add_vehicle_corner"
+                android:textSize="@dimen/twentysp"
+                android:textColor="@color/white"
+                app:name="bold">
+
+            </com.jambacabs.driver.font.CustomButton>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/default_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/progress_color_home"
+            android:indeterminate="true">
+        </ProgressBar>
+        <ImageView
+            android:id="@+id/ivProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone">
+        </ImageView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

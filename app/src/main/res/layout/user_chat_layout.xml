@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/twentydp"
+        app:cardElevation="@dimen/tendp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:name="bold"
+                android:textSize="15sp"
+                android:text="Hi"
+                android:layout_gravity="center_vertical"
+                android:lineSpacingExtra="1.1dp"
+                android:gravity="start"
+                android:padding="@dimen/tendp">
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <LinearLayout
+                android:id="@+id/llTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="horizontal">
+                <com.jambacabs.driver.font.CustomTextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|bottom"
+                    android:text="03:57 PM"
+                    android:textColor="@color/gray_new"
+                    app:name="regular"
+                    android:paddingStart="@dimen/tendp"
+                    android:paddingEnd="@dimen/tendp"
+                    android:layout_marginTop="@dimen/fivedp"
+                    android:layout_marginBottom="@dimen/fivedp"
+                    android:textSize="12sp">
+                </com.jambacabs.driver.font.CustomTextView>
+
+                <ImageView
+                    android:id="@+id/ivCheck"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_check_gray"
+                    android:layout_marginEnd="@dimen/fivedp"
+                    android:layout_gravity="end|center_vertical"
+                    android:contentDescription="@string/app_name">
+
+                </ImageView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

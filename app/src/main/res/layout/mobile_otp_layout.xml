@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlHome"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="onClick">
+
+    <RelativeLayout
+        android:id="@+id/rlBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twentydp"
+        android:layout_marginEnd="@dimen/twentydp"
+        android:layout_marginTop="@dimen/twentydp"
+        android:onClick="onClick">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:padding="@dimen/tendp"
+            android:contentDescription="@string/app_name"
+            android:layout_centerInParent="true">
+        </ImageView>
+    </RelativeLayout>
+
+    <com.jambacabs.driver.font.CustomTextView
+        android:id="@+id/tvStatic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twentydp"
+        android:layout_marginEnd="@dimen/twentydp"
+        android:layout_marginTop="@dimen/twentydp"
+        android:textSize="@dimen/twentysp"
+        android:padding="@dimen/tendp"
+        android:layout_below="@+id/rlBack"
+        android:textColor="@color/black"
+        android:lineSpacingExtra="@dimen/fivedp"
+        android:text="@string/otp_static_text">
+
+    </com.jambacabs.driver.font.CustomTextView>
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/llotp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvStatic"
+        android:layout_marginStart="@dimen/twentydp"
+        android:layout_marginEnd="@dimen/twentydp"
+        android:layout_marginTop="@dimen/twentydp"
+        android:orientation="horizontal">
+
+
+        <com.jambacabs.driver.font.CustomEditTextView
+            android:id="@+id/etOne"
+            android:layout_width="@dimen/sixtydp"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:cursorVisible="true"
+            android:layout_marginStart="@dimen/fivedp"
+            android:hint="@string/zero_placeholder"
+            android:textAlignment="center"
+            android:maxLength="1"
+            android:theme="@style/EditTextTheme"
+            android:inputType="number|textNoSuggestions"
+            android:backgroundTint="@color/black"
+            android:textCursorDrawable="@drawable/cursor_color"/>
+
+        <com.jambacabs.driver.font.CustomEditTextView
+            android:id="@+id/etTwo"
+            android:layout_width="@dimen/sixtydp"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:cursorVisible="true"
+            android:layout_marginStart="@dimen/fivedp"
+            android:hint="@string/zero_placeholder"
+            android:theme="@style/EditTextTheme"
+            android:textAlignment="center"
+            android:maxLength="1"
+            android:inputType="number|textNoSuggestions"
+            android:backgroundTint="@color/black"
+            android:textCursorDrawable="@drawable/cursor_color"/>
+
+        <com.jambacabs.driver.font.CustomEditTextView
+            android:id="@+id/etThree"
+            android:layout_width="@dimen/sixtydp"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:cursorVisible="true"
+            android:layout_marginStart="@dimen/fivedp"
+            android:hint="@string/zero_placeholder"
+            android:theme="@style/EditTextTheme"
+            android:textAlignment="center"
+            android:maxLength="1"
+            android:inputType="number|textNoSuggestions"
+            android:backgroundTint="@color/black"
+            android:textCursorDrawable="@drawable/cursor_color"/>
+
+        <com.jambacabs.driver.font.CustomEditTextView
+            android:id="@+id/etFour"
+            android:layout_width="@dimen/sixtydp"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:cursorVisible="true"
+            android:theme="@style/EditTextTheme"
+            android:layout_marginStart="@dimen/fivedp"
+            android:hint="@string/zero_placeholder"
+            android:textAlignment="center"
+            android:maxLength="1"
+            android:inputType="number|textNoSuggestions"
+            android:backgroundTint="@color/black"
+            android:textCursorDrawable="@drawable/cursor_color"/>
+
+    </LinearLayout>
+
+    <com.jambacabs.driver.font.CustomTextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/verification"
+        android:visibility="gone"
+        android:layout_below="@+id/llotp"
+        android:textColor="@color/holo_red_color"
+        android:layout_marginStart="@dimen/twentyfivedp"
+        android:layout_marginTop="@dimen/fivedp">
+
+    </com.jambacabs.driver.font.CustomTextView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/twentydp"
+        android:layout_marginTop="@dimen/fifteendp"
+        android:layout_marginEnd="@dimen/twentydp"
+        android:layout_marginBottom="@dimen/thirtydp">
+
+        <RelativeLayout
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circle_black"
+            android:onClick="onClick">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:padding="15dp"
+                android:src="@drawable/ic_arrow_forword">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="onClick"
+            android:layout_toStartOf="@id/fab"
+            android:layout_marginEnd="@dimen/twentydp"
+            android:text="@string/resend_message"
+            android:textColor="@color/resend_color"
+            android:textSize="15sp"
+            app:name="regular" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/fabProgress"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/progress_color_home"/>
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/tendp"
+            android:textSize="@dimen/twentysp"
+            android:text="@string/please_wait"
+            android:textColor="@color/white"
+            app:name="bold"
+            android:layout_below="@id/fabProgress"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

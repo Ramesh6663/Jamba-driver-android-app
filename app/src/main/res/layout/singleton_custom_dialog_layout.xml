@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:id="@+id/rlDialogBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tendp"
+                android:layout_marginBottom="@dimen/tendp"
+                android:onClick="onClick">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/tendp"
+                    android:src="@drawable/ic_arrow_back_white_24dp"
+                    android:contentDescription="@string/app_name">
+                </ImageView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:layout_marginStart="@dimen/tendp">
+                <com.jambacabs.driver.font.CustomTextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:name="bold"
+                    android:textColor="@color/white"
+                    android:textSize="20sp">
+                </com.jambacabs.driver.font.CustomTextView>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar"
+        android:divider="@drawable/dashed_list_view_divider"
+        android:layerType="software"
+        android:visibility="visible">
+    </ListView>
+
+    <com.jambacabs.driver.font.CustomTextView
+        style="@style/Base.TextAppearance.AppCompat.Medium"
+        android:id="@+id/tvNodata"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/appbar"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textColor="@color/black"
+        app:name="bold"
+        android:text="@string/nodata_found"/>
+
+
+</RelativeLayout>

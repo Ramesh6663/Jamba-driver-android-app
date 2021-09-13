@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#000000</color>
+    <color name="transparent">#80000000</color>
+    <color name="blue">#295DFA</color>
+    <color name="blue_earnings">#7685C6</color>
+    <color name="login_color">#0D1E49</color>
+    <color name="go_color">#6980E9</color>
+    <color name="dark_blue">#3141C5</color>
+    <color name="red">#FF0000</color>
+    <color name="polyline_primary_color">#FF4500</color>
+    <color name="light_gray">#CCD3D3D3</color>
+    <color name="gray">#808080</color>
+    <color name="trans">#00ffffff</color>
+    <color name="black">#000000</color>
+    <color name="fab_blue">#2C51BE</color>
+    <color name="d_signin_validationtxt_clr">#EA4444</color>
+    <color name="jamba_name_clr">#97A3B1</color>
+    <color name="earnings_tym_clr">#DCE5EE</color>
+    <color name="background_white">#BEF5F4F4</color>
+    <color name="total_text_color">#3A9A80</color>
+    <color name="trouble_code">#0087B7</color>
+    <color name="number_error_color">#FC9000</color>
+    <!--    Forgot Password Screen Colors-->
+    <color name="next_clr">#11939A</color>
+    <color name="user_info_time_color">#00A47E</color>
+    <color name="user_info_background_color">#2B3949</color>
+    <color name="cancel_ride_background">#212B35</color>
+    <color name="notification_count_color">#700CB6</color>
+    <color name="bg_clr">#F1F1F1</color>
+    <color name="user_info_icon_background">#152B35</color>
+
+    <!--    Register Screen Colors-->
+    <color name="light_white">#E9E9E9</color>
+    <color name="notifications_bg_color_one">#2B3F58</color>
+    <color name="notifications_bg_color">#F8F8F8</color>
+    <color name="terms_conditions">#005092</color>
+    <color name="holo_red_color">#FFFF4444</color>
+
+    <!--    Edit Profile Screen Colours-->
+    <color name="dark_grey">#2D3947</color>
+    <color name="nav_drawer_color">#202A35</color>
+    <color name="add_vehicle_color">#3141C5</color>
+    <color name="bottom_sheet_color">#293747</color>
+    <color name="progress_color_home">#FF4500</color>
+    <color name="navigate_color">#6A81EA</color>
+    <color name="view_line_clr">#4C5461</color>
+    <color name="white">#FFFFFF</color>
+    <color name="dash">#ffffff</color>
+
+    <color name="goclr_red">#FF0000</color>
+    <color name="goclr_green">#00FF7F</color>
+    <color name="light_white_edit_text">#EEEEEE</color>
+    <color name="gray_new">#9B9898</color>
+    <color name="progress_color">#FF4500</color>
+    <color name="resend_color">#362F45</color>
+    <color name="verified_color">#17B500</color>
+    <color name="driver_chat_color">#D2FBC0</color>
+    <color name="list_address_color">#292929</color>
+    <color name="gradient_color_one">#0068AB </color>
+    <color name="gradient_color_two">#008A62 </color>
+    <color name="gradient_color_three">#007B84 </color>
+
+</resources>

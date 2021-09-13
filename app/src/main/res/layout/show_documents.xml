@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:onClick="onClick"
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            android:contentDescription="@string/app_name">
+        </ImageView>
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tvDocuments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:text="@string/docu_textheadline"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:name="bold">
+        </com.jambacabs.driver.font.CustomTextView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llSecondOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llFirst"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:padding="15dp">
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tvDeliveryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/doc_license_front"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:padding="15dp"
+            android:textSize="25sp">
+        </com.jambacabs.driver.font.CustomTextView>
+
+        <LinearLayout
+            android:id="@+id/llSecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tvDocumentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/doc_license_front"
+            android:textColor="@color/black"
+            android:textSize="25sp">
+        </com.jambacabs.driver.font.CustomTextView>
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tv_firstText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/docu_firstText"
+            android:textColor="@color/gray"
+            android:textSize="18sp">
+
+        </com.jambacabs.driver.font.CustomTextView>
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tv_secondText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/docu_secondText"
+            android:textColor="@color/gray"
+            android:textSize="18sp">
+
+        </com.jambacabs.driver.font.CustomTextView>
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tv_thirdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/docu_thirdText"
+            android:textColor="@color/gray"
+            android:textSize="18sp">
+
+        </com.jambacabs.driver.font.CustomTextView>
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tv_fourthText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/docu_fourthText"
+            android:textColor="@color/gray"
+            android:textSize="18sp">
+
+        </com.jambacabs.driver.font.CustomTextView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_above="@id/rlBottom"
+        android:layout_below="@id/llSecondOne">
+
+        <ImageView
+            android:src="@drawable/id_proof"
+            android:id="@+id/ivDocument"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <com.jambacabs.driver.font.CustomButton
+            android:id="@+id/btnTakePhoto"
+            android:inputType="textCapSentences"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp"
+            android:background="@color/fab_blue"
+            android:onClick="onClick"
+            app:name="bold"
+            android:text="@string/docu_buttonText"
+            android:textColor="@color/white">
+
+
+        </com.jambacabs.driver.font.CustomButton>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/default_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/progress_color_home"
+            android:indeterminate="true">
+        </ProgressBar>
+        <ImageView
+            android:id="@+id/ivProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone">
+        </ImageView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

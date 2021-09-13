@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/user_info_background_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/cancel_ride_background"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlCompleteBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_arrow_back_white_24dp"
+                android:visibility="visible"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rlArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentydp"
+                android:layout_marginEnd="@dimen/twentydp">
+
+                <ImageView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_location"
+                    android:layout_marginTop="@dimen/twentydp"
+                    android:layout_marginBottom="@dimen/twentydp"
+                    android:layout_marginEnd="@dimen/twentydp">
+                </ImageView>
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:id="@+id/tvCompleteArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/tendp"
+                    android:layout_marginEnd="@dimen/twentydp"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="@dimen/tendp"
+                    android:paddingBottom="@dimen/tendp"
+                    android:layout_toEndOf="@id/ivLocation"
+                    android:layout_gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    app:name="bold">
+
+                </com.jambacabs.driver.font.CustomTextView>
+
+            </RelativeLayout>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/complete_header"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:padding="@dimen/tendp"
+                android:textSize="15sp"
+                android:layout_below="@id/rlArea"
+                app:name="bold">
+
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCompleteReasons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentydp"
+                android:layout_marginEnd="@dimen/twentydp"
+                android:layout_below="@id/tvHeader"
+                android:layout_marginBottom="@dimen/twentydp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <View
+                android:id="@+id/vwLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"
+                android:layout_below="@id/rvCompleteReasons">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vwLine"
+                android:orientation="vertical">
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/custom_reason"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:padding="@dimen/twentydp"
+                    android:textSize="18sp"
+                    app:name="bold">
+
+                </com.jambacabs.driver.font.CustomTextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white">
+                </View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twentydp"
+                    android:layout_marginTop="@dimen/twentydp"
+                    android:layout_marginEnd="@dimen/twentydp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="@dimen/twentydp">
+
+                    <com.jambacabs.driver.font.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reason"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/register_textsize_two"
+                        app:name="bold">
+
+                    </com.jambacabs.driver.font.CustomTextView>
+
+
+                    <com.jambacabs.driver.font.CustomEditTextView
+                        android:id="@+id/etReason"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/sixtydp"
+                        android:layout_marginTop="@dimen/tendp"
+                        android:background="@drawable/edit_text_card"
+                        android:inputType="text"
+                        android:padding="@dimen/tendp"
+                        android:singleLine="false" />
+
+                    <com.jambacabs.driver.font.CustomTextView
+                        android:id="@+id/tvReason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/register_margintop"
+                        android:text="@string/reason_hint"
+                        android:textColor="@color/holo_red_color"
+                        android:textSize="@dimen/register_textsize_two"
+                        android:layout_marginStart="5dp"
+                        android:visibility="gone"
+                        app:name="bold">
+
+                    </com.jambacabs.driver.font.CustomTextView>
+
+
+                </LinearLayout>
+
+                <com.jambacabs.driver.font.CustomButton
+                    android:id="@+id/btnSubmitRide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/twentydp"
+                    android:backgroundTint="@color/blue"
+                    android:lineSpacingExtra="@dimen/fivedp"
+                    android:onClick="onClick"
+                    android:padding="@dimen/twentydp"
+                    android:text="@string/submit"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/register_textsize_two"
+                    app:name="bold">
+
+                </com.jambacabs.driver.font.CustomButton>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

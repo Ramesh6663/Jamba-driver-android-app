@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:id="@+id/rlMarker"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:context = "com.jambacabs.driver.Dashboard"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:id="@+id/llTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tvMarkerTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:name="bold"
+            android:layout_marginStart="@dimen/tendp"
+            android:layout_marginEnd="@dimen/tendp"
+            android:paddingStart="@dimen/tendp"
+            android:paddingEnd="@dimen/tendp"
+            android:paddingTop="@dimen/fivedp"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textAlignment="center">
+        </com.jambacabs.driver.font.CustomTextView>
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minutes"
+            android:textColor="@color/white"
+            app:name="bold"
+            android:layout_marginTop="2dp"
+            android:paddingBottom="@dimen/fivedp"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:textAlignment="center">
+        </com.jambacabs.driver.font.CustomTextView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginStart="@dimen/fivedp"
+        android:padding="8dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/llTime">
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tvMarkerLocation"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:name="bold"
+            android:layout_gravity="center|center_vertical"
+            android:layout_centerVertical="true"
+            android:textSize="13sp"
+            android:maxLength="21"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:gravity="start">
+        </com.jambacabs.driver.font.CustomTextView>
+
+        <ImageView
+            android:id="@+id/ivNext"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="@dimen/fivedp"
+            android:src="@drawable/ic_next_arrow"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/tvMarkerLocation"
+            android:contentDescription="@string/app_name">
+        </ImageView>
+    </RelativeLayout>
+</RelativeLayout>

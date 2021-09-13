@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/inbox"
+            android:title="@string/inbox"
+            android:visible="false"
+            tools:ignore="HardcodedText" />
+    </group>
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/your_trips"
+            android:title="@string/your_trips"
+            tools:ignore="HardcodedText" />
+    </group>
+    <!-- <item
+         android:id="@+id/promotions"
+         android:title="@string/promotions" />
+-->
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/earnings"
+            android:title="@string/earnings" />
+    </group>
+    <group
+        android:id="@+id/group4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/documents"
+            android:title="@string/documents" />
+    </group>
+    <group
+        android:id="@+id/group5"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/vehicles"
+            android:title="@string/vehicles" />
+    </group>
+    <group
+        android:id="@+id/group6"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/payment"
+            android:title="@string/payment" />
+    </group>
+
+    <!--
+            <item
+                android:id="@+id/jambapro"
+                android:title="@string/jambapro" />
+    -->
+
+    <!--<group
+        android:id="@+id/group7"
+        android:checkableBehavior="single">
+        <item android:title="">
+            <menu>
+                <item
+                    android:id="@+id/signout"
+                    android:title="@string/signout" />
+            </menu>
+        </item>
+    </group>-->
+</menu>

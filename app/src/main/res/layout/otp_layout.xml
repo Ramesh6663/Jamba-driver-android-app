@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/rlNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/tendp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rlOtpBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:onClick="onClick">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/tendp"
+                    android:src="@drawable/ic_arrow_back_white_24dp">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:gravity="start"
+                android:layout_gravity="center_vertical"
+                android:text="@string/otp_text"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:name="bold" />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlNav"
+        android:orientation="vertical">
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/otp_label"
+            android:layout_margin="@dimen/twentydp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:name="bold">
+        </com.jambacabs.driver.font.CustomTextView>
+
+        <com.jambacabs.driver.font.CustomEditTextView
+            android:id="@+id/etOtp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sixtydp"
+            android:background="@drawable/edit_text_card"
+            android:inputType="number"
+            android:maxLength="5"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="@dimen/twentydp"
+            android:padding="@dimen/tendp"
+            android:maxLines="1"
+            app:name="bold"
+            android:singleLine="true" />
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tvConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/twentydp"
+            android:background="@color/black"
+            android:text="@string/verify_label"
+            android:textColor="@color/white"
+            android:padding="@dimen/twentysp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            app:name="bold">
+        </com.jambacabs.driver.font.CustomTextView>
+    </LinearLayout>
+
+
+</RelativeLayout>

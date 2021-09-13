@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/black"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rlDocumentsBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tendp"
+                android:layout_marginTop="@dimen/tendp"
+                android:layout_marginBottom="@dimen/tendp"
+                android:onClick="onClick">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_arrow_back_white_24dp">
+                </ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/tendp">
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/docu_textheadline"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:name="bold">
+                </com.jambacabs.driver.font.CustomTextView>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar">
+
+        <LinearLayout
+            android:id="@+id/llSecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_white"
+            android:padding="@dimen/twentydp">
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/docu_driverline"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twentysp"
+                app:name="bold">
+
+            </com.jambacabs.driver.font.CustomTextView>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llSecond"
+            android:layout_above="@id/tvAddVehicle">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:id="@+id/llFrontLicense"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iconLicenseFront"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="@string/app_name">
+                    </ImageView>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.jambacabs.driver.font.CustomTextView
+                            android:id="@+id/tvTitleLicenseFront"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/doc_license_front"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:name="bold">
+
+                        </com.jambacabs.driver.font.CustomTextView>
+
+                        <com.jambacabs.driver.font.CustomTextView
+                            android:id="@+id/tvFrontExpiry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/docu_expirytext"
+                            android:textSize="14sp"
+                            android:visibility="gone">
+
+                        </com.jambacabs.driver.font.CustomTextView>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_chevron">
+                    </ImageView>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/llFrontLicense"
+                    android:background="@color/gray">
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/llBackLicense"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/viewFirst"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iconLicenseBack"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="@string/app_name">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.jambacabs.driver.font.CustomTextView
+                            android:id="@+id/tvTitleLicenseBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/doc_license_back"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:name="bold">
+
+                        </com.jambacabs.driver.font.CustomTextView>
+
+                        <com.jambacabs.driver.font.CustomTextView
+                            android:id="@+id/tvBackSideExpiry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/docu_expirytext"
+                            android:textSize="14sp"
+                            android:visibility="gone">
+
+                        </com.jambacabs.driver.font.CustomTextView>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_chevron">
+
+
+                    </ImageView>
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewSecond"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/llBackLicense"
+                    android:background="@color/gray">
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/llProfilePhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/viewSecond"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iconProfilePhoto"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="@string/app_name">
+                    </ImageView>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.jambacabs.driver.font.CustomTextView
+                            android:id="@+id/tvTitleProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/profile_photo"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:name="bold">
+
+                        </com.jambacabs.driver.font.CustomTextView>
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_chevron">
+                    </ImageView>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewThird"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/llProfilePhoto"
+                    android:background="@color/gray">
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/llAadharCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/viewThird"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iconAadharCard"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="@string/app_name">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.jambacabs.driver.font.CustomTextView
+                            android:id="@+id/tvTitleAadhar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nexabold"
+                            android:text="@string/aadhar_card"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:name="bold">
+
+                        </com.jambacabs.driver.font.CustomTextView>
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_chevron">
+
+
+                    </ImageView>
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewAadhar"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/llAadharCard"
+                    android:background="@color/gray">
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/llAadharCardBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/viewAadhar"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iconAadharCardBack"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="@string/app_name">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.jambacabs.driver.font.CustomTextView
+                            android:id="@+id/tvTitleAadharBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nexabold"
+                            android:text="@string/aadhar_card_back"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:name="bold">
+
+                        </com.jambacabs.driver.font.CustomTextView>
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_chevron">
+
+
+                    </ImageView>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/viewBank"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/llAadharCardBack"
+                    android:background="@color/gray">
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/llBankPassbook"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/viewBank"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iconBankPassbook"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="@string/app_name">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.jambacabs.driver.font.CustomTextView
+                            android:id="@+id/tvTitlePassbook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nexabold"
+                            android:text="@string/doc_passbook"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:name="bold">
+                        </com.jambacabs.driver.font.CustomTextView>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_chevron">
+
+
+                    </ImageView>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/viewForth"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/llBankPassbook"
+                    android:background="@color/gray">
+                </View>
+
+
+                <LinearLayout
+                    android:id="@+id/llNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewForth"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.jambacabs.driver.font.CustomTextView
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/note"
+                        android:textColor="@color/black"
+                        android:visibility="visible"
+                        app:name="bold" />
+
+                    <com.jambacabs.driver.font.CustomTextView
+                        android:id="@+id/tvNote"
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
+                        android:visibility="visible"
+                        app:name="bold" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tvAddVehicle"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/add_vehicle_color"
+            android:padding="@dimen/fifteendp"
+            android:onClick="onClick"
+            android:inputType="textCapSentences"
+            android:text="@string/add_vehicle"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:name="bold">
+        </com.jambacabs.driver.font.CustomTextView>
+
+        <RelativeLayout
+            android:id="@+id/rlProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#BF000000"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/default_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/progress_color_home">
+            </ProgressBar>
+            <ImageView
+                android:id="@+id/ivProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone">
+            </ImageView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

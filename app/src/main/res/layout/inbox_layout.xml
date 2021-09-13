@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/notifications_bg_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center_vertical">
+
+        <!--<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/tendp">-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/tendp">
+
+            <RelativeLayout
+                android:id="@+id/rlInboxClose"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:onClick="onClick">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_close_white"
+                    android:visibility="visible"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:gravity="start"
+                android:text="@string/notifications_text"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:name="bold" />
+        </LinearLayout>
+
+            <!--<LinearLayout
+                android:id="@+id/llHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+               android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal"
+                tools:ignore="RelativeOverlap">
+
+                <com.example.jambacabs_driver.font.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/help"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:name="bold" />
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_help_white"
+                        android:visibility="visible"
+                        android:contentDescription="@string/app_name" />
+                </RelativeLayout>
+            </LinearLayout>-->
+
+        <!--</RelativeLayout>-->
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar"
+        android:background="@color/cancel_ride_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/twentydp">
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notifications_text"
+                android:textSize="@dimen/twentysp"
+                android:layout_marginStart="@dimen/tendp"
+                android:textColor="@color/white"
+                app:name="bold">
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/center_dot"
+                android:textSize="@dimen/twentysp"
+                android:layout_marginStart="@dimen/tendp"
+                android:textColor="@color/white"
+                app:name="bold">
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvNotificationCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/twentysp"
+                android:layout_marginStart="@dimen/tendp"
+                android:textColor="@color/holo_red_color"
+                app:name="bold">
+            </com.jambacabs.driver.font.CustomTextView>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lvNotificaions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/dashed_list_view_divider"
+        android:layout_below="@id/rlNotifications"
+        android:layerType="software"
+        android:visibility="gone">
+    </ListView>
+
+    <com.jambacabs.driver.font.CustomTextView
+        android:id="@+id/tvNoNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_notifications"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/twentydp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/rlNotifications"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_marginBottom="@dimen/twentydp"
+        android:textSize="@dimen/twentysp"
+        app:name="bold"
+        android:visibility="visible">
+    </com.jambacabs.driver.font.CustomTextView>
+
+    <RelativeLayout
+        android:id="@+id/rlProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/default_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/progress_color_home"
+            android:indeterminate="true">
+        </ProgressBar>
+        <ImageView
+            android:id="@+id/ivProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone">
+        </ImageView>
+    </RelativeLayout>
+</RelativeLayout>

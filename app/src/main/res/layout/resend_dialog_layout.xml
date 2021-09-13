@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jambacabs.driver.font.CustomTextView
+        android:id="@+id/tvResendMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/resend_message_two"
+        android:layout_marginTop="@dimen/twentyfivedp"
+        android:layout_marginStart="@dimen/twentydp"
+        android:layout_marginEnd="@dimen/twentydp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:name="regular">
+
+    </com.jambacabs.driver.font.CustomTextView>
+
+    <com.jambacabs.driver.font.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/resend_static_message"
+        android:layout_marginStart="@dimen/twentydp"
+        android:layout_marginEnd="@dimen/twentydp"
+        android:layout_marginTop="@dimen/tendp"
+        android:textSize="15sp"
+        android:textColor="@color/gray"
+        app:name="regular">
+
+    </com.jambacabs.driver.font.CustomTextView>
+
+    <RelativeLayout
+        android:id="@+id/rlResend"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fiftydp"
+        android:layout_marginStart="@dimen/twentydp"
+        android:layout_marginEnd="@dimen/twentydp"
+        android:layout_marginTop="@dimen/twentydp"
+        android:background="@drawable/black_border">
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tvResend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/resend_code"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:gravity="center|center_vertical"
+            android:background="?selectableItemBackground"
+            android:textSize="18sp"
+            android:onClick="onClick"
+            android:textColor="@color/black"
+            app:name="bold">
+        </com.jambacabs.driver.font.CustomTextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCall"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fiftydp"
+        android:layout_marginStart="@dimen/twentydp"
+        android:layout_marginEnd="@dimen/twentydp"
+        android:layout_marginTop="@dimen/tendp"
+        android:visibility="gone"
+        android:background="@drawable/black_border">
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tvCall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/call_code"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:gravity="center|center_vertical"
+            android:background="?selectableItemBackground"
+            android:textSize="18sp"
+            android:onClick="onClick"
+            android:textColor="@color/black"
+            app:name="bold">
+        </com.jambacabs.driver.font.CustomTextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fiftydp"
+        android:layout_margin="@dimen/twentydp"
+        android:background="@color/black">
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tvCancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/cancel"
+            android:textAlignment="center"
+            android:gravity="center|center_vertical"
+            android:onClick="onClick"
+            android:background="?selectableItemBackground"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            app:name="bold">
+
+        </com.jambacabs.driver.font.CustomTextView>
+    </RelativeLayout>
+</LinearLayout>

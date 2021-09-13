@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/tendp"
+        android:layout_marginEnd="@dimen/tendp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/tendp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivTransaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/twentydp"
+                android:layout_marginBottom="@dimen/twentydp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_payment"
+                android:visibility="gone">
+            </ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvTransactions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/redeemed"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twentysp"
+                app:name="bold">
+
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvAmount_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-$235.27"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:name="bold">
+            </com.jambacabs.driver.font.CustomTextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvTransactionDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/twentydp"
+                android:text="Sat 25 11:35"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:name="regular">
+            </com.jambacabs.driver.font.CustomTextView>
+
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvAmount_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/twentydp"
+                android:text="-$235.27"
+                android:textColor="@color/black"
+                app:name="regular">
+            </com.jambacabs.driver.font.CustomTextView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

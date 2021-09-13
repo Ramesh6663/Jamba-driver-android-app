@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rlStatus"
+    android:background="@drawable/card_radius"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const_status_card"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/bottom_sheet_color">
+
+        <LinearLayout
+            android:id="@+id/llSelect"
+            android:background="?selectableItemBackground"
+            android:onClick="onClick"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:paddingStart="@dimen/twentydp"
+            android:paddingEnd="@dimen/twentydp"
+            android:paddingTop="@dimen/twentydp"
+            android:paddingBottom="@dimen/tendp"
+            app:layout_constraintStart_toStartOf="@id/const_status_card"
+            app:layout_constraintEnd_toEndOf="@id/const_status_card"
+            app:layout_constraintTop_toTopOf="@id/const_status_card"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_up_white"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/name">
+            </ImageView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/tvBullet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/name"
+                    android:src="@drawable/ic_bullet_white">
+
+                </ImageView>
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/twentydp"
+                    android:text="@string/offline_status"
+                    android:textAlignment="center"
+                    android:layout_marginEnd="@dimen/twentydp"
+                    android:textColor="@color/white"
+                    android:layout_toStartOf="@+id/tvBullet"
+                    android:textSize="20sp"
+                    app:name="bold">
+
+                </com.jambacabs.driver.font.CustomTextView>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/const_status_card"
+        android:layout_margin="@dimen/twentydp">
+
+        <RelativeLayout
+            android:id="@+id/rlCitySelect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:onClick="onClick"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivInCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_radio_uncheck"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/tendp"
+                android:contentDescription="@string/app_name">
+
+            </ImageView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/ivInCity"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                app:name="bold"
+                android:text="@string/incity">
+            </com.jambacabs.driver.font.CustomTextView>
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/black">
+
+        </View>
+
+
+        <RelativeLayout
+            android:id="@+id/rlOutStationSelect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tendp"
+            android:background="?selectableItemBackground"
+            android:onClick="onClick"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivOutStation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_radio_uncheck"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/tendp"
+                android:contentDescription="@string/app_name">
+
+            </ImageView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/ivOutStation"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                app:name="bold"
+                android:text="@string/out_station">
+            </com.jambacabs.driver.font.CustomTextView>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

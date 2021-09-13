@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/user_info_background_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/cancel_ride_background"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlCancelBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_arrow_back_white_24dp"
+                android:visibility="visible"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/llData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/appbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twentydp"
+            android:layout_marginEnd="@dimen/twentydp">
+
+            <ImageView
+                android:id="@+id/ivLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_location"
+                android:layout_marginTop="@dimen/twentydp"
+                android:layout_marginBottom="@dimen/twentydp"
+                android:layout_marginEnd="@dimen/twentydp">
+            </ImageView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvCancelArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tendp"
+                android:layout_marginEnd="@dimen/twentydp"
+                android:layout_centerVertical="true"
+                android:paddingTop="@dimen/tendp"
+                android:paddingBottom="@dimen/tendp"
+                android:layout_toEndOf="@id/ivLocation"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                app:name="bold">
+
+            </com.jambacabs.driver.font.CustomTextView>
+
+        </RelativeLayout>
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/something_wrong"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:padding="@dimen/twentydp"
+            android:textSize="18sp"
+            app:name="regular">
+
+        </com.jambacabs.driver.font.CustomTextView>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvIssues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/dashed_list_view_divider"
+        android:layerType="software"
+        android:layout_below="@id/llData"
+        android:layout_above="@id/btnCancelRide"
+        android:layout_marginStart="@dimen/twentydp"
+        android:layout_marginEnd="@dimen/twentydp"
+        android:layout_marginBottom="@dimen/tendp"
+        android:visibility="visible">
+    </ListView>
+
+
+    <com.jambacabs.driver.font.CustomButton
+        android:id="@+id/btnCancelRide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twentydp"
+        android:layout_marginEnd="@dimen/twentydp"
+        android:layout_marginTop="@dimen/tendp"
+        android:layout_marginBottom="@dimen/twentydp"
+        android:backgroundTint="@color/blue"
+        android:lineSpacingExtra="@dimen/fivedp"
+        android:layout_alignParentBottom="true"
+        android:onClick="onClick"
+        android:padding="@dimen/twentydp"
+        android:text="@string/cancel_ride"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/register_textsize_two"
+        app:name="bold">
+
+    </com.jambacabs.driver.font.CustomButton>
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.jambacabs.driver.font.CustomTextView
+        android:id="@+id/tvCancelMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/twentydp"
+        android:text="@string/cancel_dialog_text"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/twentydp"
+        app:name="bold"
+        android:textSize="20sp"
+        android:gravity="center">
+
+    </com.jambacabs.driver.font.CustomTextView>
+
+    <com.jambacabs.driver.font.CustomButton
+        android:id="@+id/btnOKAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/twentydp"
+        android:text="@string/done"
+        android:layout_gravity="center"
+        android:onClick="onClick"
+        android:textColor="@color/white"
+        app:name="bold"
+        android:background="@drawable/signin_corners">
+    </com.jambacabs.driver.font.CustomButton>
+
+</LinearLayout>

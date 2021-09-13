@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="onClick"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/rlNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tendp"
+            android:layout_marginEnd="@dimen/twentydp"
+            android:layout_marginTop="@dimen/twentydp"
+            android:layout_marginBottom="@dimen/twentydp"
+            android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:onClick="onClick">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/tendp"
+                android:src="@drawable/ic_arrow_back_white_24dp">
+
+            </ImageView>
+        </RelativeLayout>
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:gravity="start"
+            android:layout_gravity="center_vertical"
+            android:text="@string/add_bank_account"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:name="bold" />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlNav"
+        android:onClick="onClick">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentydp"
+                android:layout_marginTop="@dimen/twentydp"
+                android:layout_marginEnd="@dimen/twentydp"
+                android:orientation="vertical">
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/register_textsize_two"
+                    app:name="regular">
+
+                </com.jambacabs.driver.font.CustomTextView>
+
+
+                <com.jambacabs.driver.font.CustomEditTextView
+                    android:id="@+id/etAccountNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sixtydp"
+                    android:layout_marginTop="@dimen/tendp"
+                    android:background="@drawable/edit_text_card"
+                    android:inputType="number"
+                    android:layout_marginStart="-3dp"
+                    android:maxLength="16"
+                    android:padding="@dimen/tendp"
+                    android:singleLine="false" />
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:id="@+id/tvAccountError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/register_margintop"
+                    android:text="@string/account_number_placeholder"
+                    android:textColor="@color/holo_red_color"
+                    android:textSize="@dimen/register_textsize_two"
+                    android:visibility="gone"
+                    app:name="regular">
+
+                </com.jambacabs.driver.font.CustomTextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentydp"
+                android:layout_marginTop="@dimen/twentydp"
+                android:layout_marginEnd="@dimen/twentydp"
+                android:orientation="vertical">
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/confirm_account_number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/register_textsize_two"
+                    app:name="regular">
+
+                </com.jambacabs.driver.font.CustomTextView>
+
+
+                <com.jambacabs.driver.font.CustomEditTextView
+                    android:id="@+id/etConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sixtydp"
+                    android:layout_marginTop="@dimen/tendp"
+                    android:background="@drawable/edit_text_card"
+                    android:layout_marginStart="-3dp"
+                    android:inputType="number"
+                    android:maxLength="16"
+                    android:padding="@dimen/tendp"
+                    android:singleLine="false" />
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:id="@+id/tvConfirmError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/register_margintop"
+                    android:text="@string/confirm_account_number"
+                    android:textColor="@color/holo_red_color"
+                    android:textSize="@dimen/register_textsize_two"
+                    android:visibility="gone"
+                    app:name="regular">
+
+                </com.jambacabs.driver.font.CustomTextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentydp"
+                android:layout_marginTop="@dimen/twentydp"
+                android:layout_marginEnd="@dimen/twentydp"
+                android:orientation="vertical">
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ifsc_code"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/register_textsize_two"
+                    app:name="regular">
+
+                </com.jambacabs.driver.font.CustomTextView>
+
+
+                <com.jambacabs.driver.font.CustomEditTextView
+                    android:id="@+id/etIfsc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sixtydp"
+                    android:layout_marginTop="@dimen/tendp"
+                    android:layout_marginStart="-3dp"
+                    android:background="@drawable/edit_text_card"
+                    android:inputType="text"
+                    android:padding="@dimen/tendp"
+                    android:singleLine="false" />
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:id="@+id/tvIfscError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/register_margintop"
+                    android:text="@string/ifsc_code_placeholder"
+                    android:textColor="@color/holo_red_color"
+                    android:textSize="@dimen/register_textsize_two"
+                    android:visibility="gone"
+                    app:name="regular">
+
+                </com.jambacabs.driver.font.CustomTextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentydp"
+                android:layout_marginTop="@dimen/twentydp"
+                android:layout_marginEnd="@dimen/twentydp"
+                android:orientation="vertical">
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_holder_name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/register_textsize_two"
+                    app:name="regular">
+
+                </com.jambacabs.driver.font.CustomTextView>
+
+
+                <com.jambacabs.driver.font.CustomEditTextView
+                    android:id="@+id/etAccountHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sixtydp"
+                    android:layout_marginTop="@dimen/tendp"
+                    android:background="@drawable/edit_text_card"
+                    android:layout_marginStart="-3dp"
+                    android:inputType="text"
+                    android:padding="@dimen/tendp"
+                    android:singleLine="false" />
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:id="@+id/tvNameError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/register_margintop"
+                    android:text="@string/account_holder_name_placeholder"
+                    android:textColor="@color/holo_red_color"
+                    android:textSize="@dimen/register_textsize_two"
+                    android:visibility="gone"
+                    app:name="regular">
+
+                </com.jambacabs.driver.font.CustomTextView>
+            </LinearLayout>
+
+
+            <com.jambacabs.driver.font.CustomButton
+                android:id="@+id/btnAddAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/twentydp"
+                android:backgroundTint="@color/blue"
+                android:lineSpacingExtra="@dimen/fivedp"
+                android:onClick="onClick"
+                android:padding="@dimen/twentydp"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/register_textsize_two"
+                app:name="bold">
+
+            </com.jambacabs.driver.font.CustomButton>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/default_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/progress_color_home"
+            android:indeterminate="true">
+        </ProgressBar>
+        <ImageView
+            android:id="@+id/ivProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone">
+        </ImageView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

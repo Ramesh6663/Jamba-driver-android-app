@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textSize">60sp</dimen>
+    <dimen name="twentysp">20sp</dimen>
+    <dimen name="twentytwosp">22sp</dimen>
+    <dimen name="twentytfivesp">25sp</dimen>
+
+    <dimen name="zerodp">0dp</dimen>
+    <dimen name="onedp">1dp</dimen>
+    <dimen name="threedp">3dp</dimen>
+    <dimen name="fivedp">5dp</dimen>
+    <dimen name="tendp">10dp</dimen>
+    <dimen name="fifteendp">15dp</dimen>
+    <dimen name="twentydp">20dp</dimen>
+    <dimen name="twentyfivedp">25dp</dimen>
+    <dimen name="twentyeightdp">28dp</dimen>
+    <dimen name="thirtydp">30dp</dimen>
+    <dimen name="thirtyfivedp">35dp</dimen>
+    <dimen name="fourtydp">40dp</dimen>
+    <dimen name="fiftydp">50dp</dimen>
+    <dimen name="sixtydp">60dp</dimen>
+    <dimen name="seventydp">70dp</dimen>
+    <dimen name="eightydp">80dp</dimen>
+
+    <!-- Driver Sign In Page Dimens   -->
+
+    <dimen name="margin">20dp</dimen>
+    <dimen name="margin_left">20dp</dimen>
+    <dimen name="margin_right">20dp</dimen>
+    <dimen name="margin_top">20dp</dimen>
+    <dimen name="emailtxt_margin_bottom">20dp</dimen>
+    <dimen name="fab_margin_bottom">20dp</dimen>
+    <dimen name="forgotpsd_margin_bottom">40dp</dimen>
+    <dimen name="tv_textsize">20sp</dimen>
+    <dimen name="tv_forgot_pswdtextsize">20sp</dimen>
+
+    <!--    Register Screen Dimens-->
+    <dimen name="register_textsize_one">18sp</dimen>
+    <dimen name="register_textsize_two">15sp</dimen>
+
+    <dimen name="register_margintop">2dp</dimen>
+
+    <!--    Forgot Password Page Dimens-->
+
+    <dimen name="fp_heading_textsize">30sp</dimen>
+    <dimen name="fp_emailid_textsize">20sp</dimen>
+
+    <dimen name="twentyfivesp">25sp</dimen>
+    <dimen name="fourtyfivedp">45dp</dimen>
+    <dimen name="thirtysp">30sp</dimen>
+    <!--    Edit Screen Dimens-->
+
+    <dimen name="edit_rlFirst">250dp</dimen>
+    <dimen name="edit_back_top">20dp</dimen>
+    <dimen name="edit_back_start">20dp</dimen>
+    <dimen name="edit_textsize">20sp</dimen>
+    <dimen name="edit_margin_end">20dp</dimen>
+
+</resources>
+

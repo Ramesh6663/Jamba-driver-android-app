@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlMain"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.jambacabs.driver.Trips">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/fifteendp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/tendp"
+            android:layout_marginBottom="@dimen/tendp"
+            android:padding="@dimen/tendp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                android:id="@+id/ivTripBack"
+                android:onClick="onClick"
+                android:contentDescription="@string/app_name">
+
+            </ImageView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/thirtydp"
+                android:text="@string/rides_list"
+                app:name="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twentysp">
+            </com.jambacabs.driver.font.CustomTextView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ListView
+        android:id="@+id/lvRides"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@id/cvFirst">
+    </ListView>
+
+    <com.jambacabs.driver.font.CustomTextView
+        android:id="@+id/tvNoRides"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/thirtydp"
+        android:text="@string/no_trips"
+        android:textColor="@color/black"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/twentydp"
+        android:layout_below="@id/cvFirst"
+        app:name="bold"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp">
+    </com.jambacabs.driver.font.CustomTextView>
+
+
+    <RelativeLayout
+        android:id="@+id/rlProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF000000"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/default_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/progress_color_home"
+            android:indeterminate="true">
+        </ProgressBar>
+        <ImageView
+            android:id="@+id/ivProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone">
+        </ImageView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

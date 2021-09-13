@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlMarker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/twentydp"
+        android:padding="@dimen/tendp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_location_white"
+            android:contentDescription="@string/app_name">
+        </ImageView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/rlMarker"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/tendp">
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/app_name"
+            android:id="@+id/address"
+            app:name="bold"
+            android:textColor="@color/list_address_color"
+            android:textSize="15sp"/>
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/app_name"
+            android:layout_margin="@dimen/fivedp"
+            android:id="@+id/area"
+            app:name="bold"
+            android:textColor="@color/list_address_color"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+</RelativeLayout>

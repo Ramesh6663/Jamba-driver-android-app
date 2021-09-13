@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/llAccount"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="onClick"
+    android:background="?selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/ivItemImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_car"
+            android:padding="@dimen/twentydp"
+            android:contentDescription="@string/app_name">
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vehicles"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                app:name="bold">
+            </com.jambacabs.driver.font.CustomTextView>
+
+        </LinearLayout>
+    </LinearLayout>

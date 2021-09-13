@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/const_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.jambacabs.driver.Dashboard">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </fragment>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUser"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/tendp"
+        android:layout_marginTop="@dimen/twentydp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_account_black"
+        android:onClick="onClick"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <RelativeLayout
+        android:id="@+id/rlNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/twentydp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            style="?attr/actionButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:focusable="true">
+
+            <RelativeLayout
+                android:id="@+id/rlNotificationCircle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="onClick"
+                android:background="@drawable/circle_white">
+                <ImageView
+                    android:id="@+id/ivNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name"
+                    android:tint="@color/black"
+                    android:src="@drawable/ic_notifications">
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/ivNotificationDot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/tendp"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/fivedp"
+                    android:contentDescription="@string/app_name">
+                </ImageView>
+
+            </RelativeLayout>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlEarningsDash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/thirtydp"
+            android:paddingEnd="@dimen/thirtydp"
+            android:paddingTop="@dimen/tendp"
+            android:paddingBottom="@dimen/tendp"
+            android:background="@drawable/black_corner"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/thirtyfivedp"
+            android:onClick="onClickEarnings">
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvEarningsDash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 0.00"
+                android:textColor="@color/white"
+                app:name="bold"
+                android:textSize="25sp">
+            </com.jambacabs.driver.font.CustomTextView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/twentydp"
+        app:cardBackgroundColor="@color/user_info_background_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardElevation="@dimen/twentyfivedp"
+        app:cardCornerRadius="@dimen/tendp"
+        android:elevation="@dimen/twentyfivedp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tendp"
+                android:layout_marginEnd="@dimen/tendp"
+                android:layout_marginTop="@dimen/twentydp"
+                android:layout_marginBottom="@dimen/twentydp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_location"
+                    android:layout_margin="@dimen/twentydp">
+                </ImageView>
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:id="@+id/tvArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/tendp"
+                    android:layout_marginEnd="@dimen/twentydp"
+                    android:layout_marginBottom="@dimen/tendp"
+                    android:layout_marginTop="@dimen/tendp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    app:name="bold">
+
+                </com.jambacabs.driver.font.CustomTextView>
+
+            </LinearLayout>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentydp"
+                android:layout_marginEnd="@dimen/twentydp"
+                android:layout_marginBottom="@dimen/twentydp"
+                android:layout_marginTop="@dimen/tendp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:name="regular"
+                android:visibility="gone">
+
+            </com.jambacabs.driver.font.CustomTextView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/rlGo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rlSheets"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="onClick"
+        android:background="@drawable/circle_corner"
+        android:layout_marginBottom="@dimen/twentydp">
+
+        <RelativeLayout
+            android:id="@+id/rlBlink"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/blink_circle_border">
+
+        </RelativeLayout>
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tvGo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:name="bold"
+            android:textSize="25sp"
+            android:text="@string/go_text">
+
+        </com.jambacabs.driver.font.CustomTextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSheets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-10dp"
+            android:visibility="visible">
+            <include
+                layout="@layout/bottom_sheet_layout"/>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/user_bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <include
+                layout="@layout/user_info_sheet"/>
+
+            <RelativeLayout
+
+                android:id="@+id/rlNavigate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/twentydp"
+                android:layout_marginBottom="-40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rlSheets"
+                android:background="@drawable/navigate_corner_radius"
+                android:visibility="gone"
+                app:layout_anchor="@+id/llUserInfo"
+                app:layout_anchorGravity="top|end"
+                android:onClick="onClickNavigate"
+                android:layout_gravity="start|top"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvNavigate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_navigation_white"
+                android:drawablePadding="@dimen/tendp"
+                android:gravity="center_vertical|center"
+                android:paddingStart="@dimen/tendp"
+                android:paddingTop="@dimen/tendp"
+                android:paddingEnd="@dimen/tendp"
+                android:paddingBottom="@dimen/fifteendp"
+                android:text="@string/pickup_text"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:name="bold"
+                tools:ignore="RtlCompat">
+
+            </com.jambacabs.driver.font.CustomTextView>
+            </RelativeLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </RelativeLayout>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinate_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+        <include
+            layout="@layout/ride_cancel_layout"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinate_complete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+        <include
+            layout="@layout/ride_complete_reasons"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:visibility="gone"
+        android:focusable="true">
+
+        <ProgressBar
+            android:id="@+id/default_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/progress_color_home"
+            android:indeterminate="true">
+        </ProgressBar>
+
+        <ImageView
+            android:id="@+id/ivProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone">
+        </ImageView>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

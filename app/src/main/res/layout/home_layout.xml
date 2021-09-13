@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/rlLogo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.69"
+        android:background="@color/login_color">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:contentDescription="@string/name"
+            android:src="@drawable/logo"
+            android:background="@color/login_color"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:onClick="onClick">
+        </ImageView>
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/light_gray"
+            app:name="regular"
+            android:alpha="0.7"
+            android:textSize="12sp"
+            android:text="@string/dd_text">
+        </com.jambacabs.driver.font.CustomTextView>
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/twentydp"
+            android:layout_marginTop="@dimen/twentydp">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/name"
+                android:src="@drawable/ic_back"
+                android:padding="@dimen/tendp"
+                android:layout_centerInParent="true">
+            </ImageView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentydp"
+                android:layout_marginTop="@dimen/twentydp"
+                android:text="@string/welcome_one"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twentytfivesp"
+                app:name="regular">
+
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentydp"
+                android:text="@string/welcome_two"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twentytfivesp"
+                app:name="regular">
+
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentydp"
+                android:layout_marginTop="@dimen/twentydp"
+                android:layout_marginEnd="@dimen/twentydp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:id="@+id/tvSignin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/signin_corners"
+                    android:onClick="onClick"
+                    android:padding="@dimen/fifteendp"
+                    android:text="@string/signin"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:name="bold">
+
+                </com.jambacabs.driver.font.CustomTextView>
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:id="@+id/tvRegister"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/tendp"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:background="@drawable/border"
+                    android:padding="@dimen/fifteendp"
+                    android:text="@string/register"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    app:name="bold">
+                </com.jambacabs.driver.font.CustomTextView>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/onedp"
+                android:layout_marginTop="@dimen/twentyfivedp"
+                android:background="@color/light_gray">
+            </View>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvConnect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentydp"
+                android:layout_marginTop="@dimen/twentyfivedp"
+                android:layout_marginEnd="@dimen/twentydp"
+                android:layout_marginBottom="@dimen/tendp"
+                android:text="@string/ride_user"
+                android:textSize="15sp"
+                android:onClick="onClick"
+                android:textColor="@color/blue"
+                app:name="bold">
+            </com.jambacabs.driver.font.CustomTextView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

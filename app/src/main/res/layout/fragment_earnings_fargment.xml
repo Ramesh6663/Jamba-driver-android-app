@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_marginStart="@dimen/tendp"
+    android:layout_marginEnd="@dimen/tendp"
+    android:background="@drawable/bg_background"
+    tools:context="com.jambacabs.driver.EarningsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/fifteendp">
+
+            <ImageView
+                android:id="@+id/ivVisibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="@dimen/twentydp"
+                android:padding="@dimen/tendp"
+                android:visibility="gone"
+                android:src="@drawable/ic_visibility">
+
+            </ImageView>
+
+            <LinearLayout
+                android:id="@+id/priceRL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_corner_rounded_black_filled_white_border"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/tendp">
+
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/tendp"
+                    android:paddingEnd="0dp"
+                    android:text="\u20B9"
+                    android:textColor="@color/quantum_googgreen200"
+                    android:textSize="@dimen/thirtydp"
+                    android:textStyle="normal" />
+
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:id="@+id/price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:paddingEnd="@dimen/tendp"
+                    android:paddingStart="0dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="normal" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/twentydp"
+                android:padding="@dimen/tendp"
+                android:src="@drawable/ic_help"
+                android:contentDescription="@string/app_name">
+
+            </ImageView>
+        </RelativeLayout>
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tripNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/earnings_trip_text"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/twentysp" />
+
+        <View
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/twentydp"
+            android:background="@color/view_line_clr" />
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tendp"
+            android:gravity="center_horizontal"
+            android:text="@string/earnings_datetym_text"
+            android:textColor="@color/earnings_tym_clr"
+            android:textSize="20sp" />
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/tvTVehicleType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fivedp"
+            android:gravity="center_horizontal"
+            android:text="@string/earnings_jamba_go"
+            android:textColor="@color/jamba_name_clr"
+            android:textSize="25sp" />
+
+        <com.jambacabs.driver.font.CustomTextView
+            android:id="@+id/see_all_trips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/thirtydp"
+            android:layout_marginBottom="@dimen/thirtydp"
+            android:onClick="onClick"
+            android:gravity="center_horizontal"
+            android:text="@string/earnings_trips_text"
+            android:textColor="@color/blue_earnings"
+            android:textSize="@dimen/twentysp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF000000"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/default_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/progress_color_home">
+        </ProgressBar>
+        <ImageView
+            android:id="@+id/ivProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone">
+        </ImageView>
+    </RelativeLayout>
+</RelativeLayout>

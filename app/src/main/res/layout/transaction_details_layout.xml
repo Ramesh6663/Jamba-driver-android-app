@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlMain"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/tendp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rlTransactionsBack"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:onClick="onClick">
+
+                    <ImageView
+                        android:id="@+id/ivBack"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_arrow_back_white_24dp"
+                        android:visibility="visible"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start"
+                    android:text="@string/transaction_activity"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:name="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal"
+                tools:ignore="RelativeOverlap">
+            </LinearLayout>
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar">
+
+    <RelativeLayout
+        android:id="@+id/rlCash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/your_balance"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/twentydp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:name="bold">
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\u20B9 0"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/twentydp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:name="bold">
+            </com.jambacabs.driver.font.CustomTextView>
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvTransactionCashOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/twentydp"
+                android:paddingBottom="@dimen/twentydp"
+                android:layout_margin="@dimen/twentydp"
+                android:text="@string/cash_out"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                app:name="bold"
+                android:background="@drawable/signin_corners">
+
+            </com.jambacabs.driver.font.CustomTextView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray">
+
+                <com.jambacabs.driver.font.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/procced"
+                    android:layout_margin="@dimen/twentydp"
+                    android:layout_marginTop="@dimen/twentydp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:name="regular">
+                </com.jambacabs.driver.font.CustomTextView>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTransactions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <com.jambacabs.driver.font.CustomTextView
+                android:id="@+id/tvNoTransactions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_transactions"
+                android:layout_margin="@dimen/twentydp"
+                android:layout_marginTop="@dimen/twentydp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:visibility="visible"
+                app:name="bold">
+            </com.jambacabs.driver.font.CustomTextView>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/default_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/progress_color_home"
+            android:indeterminate="true">
+        </ProgressBar>
+        <ImageView
+            android:id="@+id/ivProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone">
+        </ImageView>
+    </RelativeLayout>
+
+</RelativeLayout>
